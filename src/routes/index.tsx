@@ -2,14 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown, ArrowDownRight, ArrowRight, ArrowUpRight, CalendarDays, MapPin, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import TEDxRSETParticles from "@/assets/TEDxRSET-particles.jpg";
+import originParticles from "@/assets/origin-particles.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "TEDxRSET 2026: TEDxRSET — Ideas Worth Spreading" },
-      { name: "description", content: "TEDxRSET 2026: TEDxRSET — where every big idea begins. An independently organized TED event at Rajagiri School of Engineering & Technology, Kochi." },
-      { property: "og:title", content: "TEDxRSET 2026: TEDxRSET" },
+      { title: "TEDxRSET 2026: ORIGIN — Ideas Worth Spreading" },
+      { name: "description", content: "TEDxRSET 2026: ORIGIN — where every big idea begins. An independently organized TED event at Rajagiri School of Engineering & Technology, Kochi." },
+      { property: "og:title", content: "TEDxRSET 2026: ORIGIN" },
       { property: "og:description", content: "Where every big idea begins. An independently organized TED event at RSET, Kochi." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -78,7 +78,7 @@ function Index() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 sm:px-10 lg:px-12">
           <a href="#home" className="inline-flex flex-col gap-1" aria-label="TEDxRSET home" onClick={() => setMenuOpen(false)}>
             <Wordmark small />
-            <span className="text-[9px] font-bold uppercase tracking-[0.24em] text-muted-foreground">2026 · TEDxRSET</span>
+            <span className="text-[9px] font-bold uppercase tracking-[0.24em] text-muted-foreground">2026 · Origin</span>
           </a>
           <nav className="hidden items-center gap-9 lg:flex" aria-label="Main navigation">
             {navigation.map(item => <a key={item.href} href={item.href} className="text-xs font-semibold uppercase tracking-[0.14em] text-foreground/75 transition-colors hover:text-primary">{item.label}</a>)}
@@ -92,7 +92,7 @@ function Index() {
       </header>
 
       <section id="home" className="relative flex min-h-[640px] h-[min(86svh,820px)] items-center justify-center overflow-hidden bg-background pt-20 lg:min-h-[720px] lg:h-[min(94svh,940px)]">
-        <img src={TEDxRSETParticles} width={1600} height={1008} alt="Red and white points of light radiating from a central spark" className="hero-image pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-80" fetchPriority="high" />
+        <img src={originParticles} width={1600} height={1008} alt="Red and white points of light radiating from a central spark" className="hero-image pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-80" fetchPriority="high" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/45 via-transparent to-background" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50" />
         <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-6 text-center sm:px-10">
@@ -117,7 +117,7 @@ function Index() {
           <div><div className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-primary"><span className="h-px w-8 bg-primary" /> 01 / About</div><h2 className="max-w-sm font-display text-5xl font-bold leading-[1.06] sm:text-6xl">Where ideas <span className="text-primary">begin.</span></h2></div>
           <div className="flex flex-col justify-center">
             <p className="max-w-2xl font-display text-2xl font-medium leading-snug sm:text-3xl">TEDx events bring a community together around ideas worth spreading.</p>
-            <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground">This year's theme, <strong className="text-foreground">TEDxRSET</strong>, looks at where innovation, culture and curiosity start — the first spark behind every big idea, hosted at Rajagiri School of Engineering &amp; Technology.</p>
+            <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground">This year's theme, <strong className="text-foreground">ORIGIN</strong>, looks at where innovation, culture and curiosity start — the first spark behind every big idea, hosted at Rajagiri School of Engineering &amp; Technology.</p>
             <div className="mt-12 grid grid-cols-3 gap-6 border-t border-border pt-10">
               {[
                 { value: "10+", label: "Speakers" },
@@ -131,7 +131,7 @@ function Index() {
 
       <section id="speakers" className="scroll-mt-0 bg-[var(--surface-light)] py-24 text-[var(--ink-dark)] sm:py-32">
         <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
-          <div className="mb-16 flex flex-col justify-between gap-7 sm:flex-row sm:items-end"><div><div className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-primary"><span className="h-px w-8 bg-primary" /> 02 / Speakers</div><h2 className="font-display text-5xl font-bold leading-[1.06] sm:text-6xl">Voices at the <span className="text-primary">TEDxRSET.</span></h2></div><p className="max-w-xs text-sm leading-7 opacity-65">Thinkers, makers and storytellers taking the stage this year.</p></div>
+          <div className="mb-16 flex flex-col justify-between gap-7 sm:flex-row sm:items-end"><div><div className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-primary"><span className="h-px w-8 bg-primary" /> 02 / Speakers</div><h2 className="font-display text-5xl font-bold leading-[1.06] sm:text-6xl">Voices at the <span className="text-primary">origin.</span></h2></div><p className="max-w-xs text-sm leading-7 opacity-65">Thinkers, makers and storytellers taking the stage this year.</p></div>
           <div className="grid border-t border-[var(--ink-dark)]/20 md:grid-cols-3">
             {[
               { number: "01", title: "New perspectives", text: "Step beyond the familiar and see the world through a different lens." },
