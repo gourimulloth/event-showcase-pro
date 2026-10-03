@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep the TEDxRSET experience as a single-page TanStack route with anchor sections; this mirrors the event-site reference and avoids empty routes.
+- Keep event logistics, speakers, and registration unclaimed until confirmed; the public TEDxRSET website is the authoritative outbound destination.

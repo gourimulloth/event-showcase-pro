@@ -1,0 +1,2 @@
+- [x] Build a TEDxRSET website inspired by the TEDxAJCE reference.
+- [x] Verify the finished site on desktop and mobile.
