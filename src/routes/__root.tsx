@@ -11,7 +11,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportTESxRSETError } from "../lib/TESxRSET-error-reporting";
+import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -39,7 +39,7 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportTESxRSETError(error, { boundary: "tanstack_root_error_component" });
+    reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
 
   return (
