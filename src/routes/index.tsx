@@ -50,7 +50,7 @@ function Index() {
         {menuOpen && <nav className="flex flex-col gap-1 border-t border-border bg-background px-6 py-5 lg:hidden" aria-label="Mobile navigation">{navigation.map(item => <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)} className="py-3 text-sm font-semibold uppercase tracking-[0.14em]">{item.label}</a>)}<a href="https://tedxrset.com/" target="_blank" rel="noopener noreferrer" className="py-3 text-sm font-semibold uppercase tracking-[0.14em] text-primary">Visit official site ↗</a></nav>}
       </header>
 
-      <section id="home" className="relative flex min-h-[690px] h-[min(88svh,900px)] items-center justify-center overflow-hidden bg-background pt-20">
+      <section id="home" className="relative flex min-h-[600px] h-[min(78svh,760px)] items-center justify-center overflow-hidden bg-background pt-20 lg:min-h-[690px] lg:h-[min(88svh,900px)]">
         <img src={originParticles} width={1600} height={1008} alt="Red and white points of light radiating from a central spark" className="hero-image pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-80" fetchPriority="high" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/45 via-transparent to-background" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50" />

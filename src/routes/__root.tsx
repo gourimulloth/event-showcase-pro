@@ -85,7 +85,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "TEDxRSET celebrates ideas worth spreading at Rajagiri School of Engineering & Technology." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      
     ],
     links: [
       {
