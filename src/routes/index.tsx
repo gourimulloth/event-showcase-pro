@@ -7,10 +7,10 @@ import originParticles from "@/assets/origin-particles.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "TEDxRSET 2026: ORIGIN — Ideas Worth Spreading" },
-      { name: "description", content: "TEDxRSET 2026: ORIGIN — where every big idea begins. An independently organized TED event at Rajagiri School of Engineering & Technology, Kochi." },
-      { property: "og:title", content: "TEDxRSET 2026: ORIGIN" },
-      { property: "og:description", content: "Where every big idea begins. An independently organized TED event at RSET, Kochi." },
+      { title: "TEDxRSET — Ideas Worth Spreading" },
+      { name: "description", content: "TEDxRSET — an independently organized TED event at Rajagiri School of Engineering & Technology, Kochi. Ideas worth spreading." },
+      { property: "og:title", content: "TEDxRSET" },
+      { property: "og:description", content: "An independently organized TED event at RSET, Kochi." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -18,7 +18,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const EVENT_DATE = new Date("2026-05-02T09:00:00+05:30");
+// TODO: change this to your real event date
+const EVENT_DATE = new Date("2027-02-20T09:00:00+05:30");
 
 const navigation = [
   { label: "Home", href: "#home" },
@@ -78,7 +79,7 @@ function Index() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 sm:px-10 lg:px-12">
           <a href="#home" className="inline-flex flex-col gap-1" aria-label="TEDxRSET home" onClick={() => setMenuOpen(false)}>
             <Wordmark small />
-            <span className="text-[9px] font-bold uppercase tracking-[0.24em] text-muted-foreground">2026 · Origin</span>
+            <span className="text-[9px] font-bold uppercase tracking-[0.24em] text-muted-foreground">Kochi · 2027</span>
           </a>
           <nav className="hidden items-center gap-9 lg:flex" aria-label="Main navigation">
             {navigation.map(item => <a key={item.href} href={item.href} className="text-xs font-semibold uppercase tracking-[0.14em] text-foreground/75 transition-colors hover:text-primary">{item.label}</a>)}
@@ -96,11 +97,11 @@ function Index() {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/45 via-transparent to-background" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50" />
         <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-6 text-center sm:px-10">
-          <div className="reveal-up mb-7 flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.28em] text-foreground/85"><span className="h-px w-8 bg-primary" />8th edition · TEDxRSET 2026<span className="h-px w-8 bg-primary" /></div>
-          <h1 className="reveal-up reveal-delay font-display text-[clamp(4rem,13vw,11rem)] font-bold leading-[0.92] tracking-normal drop-shadow-2xl">ORI<span className="text-primary">GIN</span></h1>
-          <p className="reveal-up reveal-delay-2 mt-6 max-w-xl font-display text-lg font-medium text-foreground sm:text-2xl">Where every big idea begins.</p>
+          <div className="reveal-up mb-7 flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.28em] text-foreground/85"><span className="h-px w-8 bg-primary" />TEDxRSET 2027<span className="h-px w-8 bg-primary" /></div>
+          <h1 className="reveal-up reveal-delay font-display text-[clamp(3rem,10vw,9rem)] font-bold leading-[0.92] tracking-normal drop-shadow-2xl">TEDx<span className="text-primary">RSET</span></h1>
+          <p className="reveal-up reveal-delay-2 mt-6 max-w-xl font-display text-lg font-medium text-foreground sm:text-2xl">Ideas Worth Spreading.</p>
           <div className="reveal-up reveal-delay-2 mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/70">
-            <span className="inline-flex items-center gap-2"><CalendarDays className="h-3.5 w-3.5 text-primary" />2 May 2026</span>
+            <span className="inline-flex items-center gap-2"><CalendarDays className="h-3.5 w-3.5 text-primary" />20 Feb 2027</span>
             <span className="inline-flex items-center gap-2"><MapPin className="h-3.5 w-3.5 text-primary" />RSET, Kochi, Kerala</span>
           </div>
           <Countdown />
@@ -117,12 +118,12 @@ function Index() {
           <div><div className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-primary"><span className="h-px w-8 bg-primary" /> 01 / About</div><h2 className="max-w-sm font-display text-5xl font-bold leading-[1.06] sm:text-6xl">Where ideas <span className="text-primary">begin.</span></h2></div>
           <div className="flex flex-col justify-center">
             <p className="max-w-2xl font-display text-2xl font-medium leading-snug sm:text-3xl">TEDx events bring a community together around ideas worth spreading.</p>
-            <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground">This year's theme, <strong className="text-foreground">ORIGIN</strong>, looks at where innovation, culture and curiosity start — the first spark behind every big idea, hosted at Rajagiri School of Engineering &amp; Technology.</p>
+            <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground">TEDxRSET is hosted at Rajagiri School of Engineering &amp; Technology, Kochi. Our theme will be announced soon — a day of talks, performances and conversations that spark curiosity.</p>
             <div className="mt-12 grid grid-cols-3 gap-6 border-t border-border pt-10">
               {[
-                { value: "10+", label: "Speakers" },
-                { value: "300", label: "Attendees" },
                 { value: "1", label: "Full day" },
+                { value: "Live", label: "Talks" },
+                { value: "RSET", label: "Kochi" },
               ].map(stat => <div key={stat.label}><span className="font-display text-4xl font-bold text-primary sm:text-5xl">{stat.value}</span><p className="mt-2 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">{stat.label}</p></div>)}
             </div>
           </div>
@@ -131,7 +132,7 @@ function Index() {
 
       <section id="speakers" className="scroll-mt-0 bg-[var(--surface-light)] py-24 text-[var(--ink-dark)] sm:py-32">
         <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
-          <div className="mb-16 flex flex-col justify-between gap-7 sm:flex-row sm:items-end"><div><div className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-primary"><span className="h-px w-8 bg-primary" /> 02 / Speakers</div><h2 className="font-display text-5xl font-bold leading-[1.06] sm:text-6xl">Voices at the <span className="text-primary">origin.</span></h2></div><p className="max-w-xs text-sm leading-7 opacity-65">Thinkers, makers and storytellers taking the stage this year.</p></div>
+          <div className="mb-16 flex flex-col justify-between gap-7 sm:flex-row sm:items-end"><div><div className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-primary"><span className="h-px w-8 bg-primary" /> 02 / Speakers</div><h2 className="font-display text-5xl font-bold leading-[1.06] sm:text-6xl">Voices on the <span className="text-primary">stage.</span></h2></div><p className="max-w-xs text-sm leading-7 opacity-65">Thinkers, makers and storytellers taking the stage this year.</p></div>
           <div className="grid border-t border-[var(--ink-dark)]/20 md:grid-cols-3">
             {[
               { number: "01", title: "New perspectives", text: "Step beyond the familiar and see the world through a different lens." },
@@ -148,7 +149,7 @@ function Index() {
           <div className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-primary"><span className="h-px w-8 bg-primary" /> 03 / Schedule</div>
           <div className="flex flex-col justify-between gap-10 lg:flex-row lg:items-end">
             <h2 className="max-w-xl font-display text-5xl font-bold leading-[1.06] sm:text-6xl">One day. <span className="text-primary">Every idea.</span></h2>
-            <p className="max-w-sm text-sm leading-7 text-muted-foreground">A full day of talks, performances and conversations on 2 May 2026. The detailed schedule will be published closer to the event.</p>
+            <p className="max-w-sm text-sm leading-7 text-muted-foreground">A full day of talks, performances and conversations on 20 February 2027. The detailed schedule will be published closer to the event.</p>
           </div>
           <div className="mt-16 grid gap-px border border-border bg-border sm:grid-cols-3">
             {[
