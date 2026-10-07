@@ -85,6 +85,16 @@ This site was built with **Lovable** (an AI app builder) as the starting point, 
 
 The project can be deployed for free on Vercel or Netlify by importing this GitHub repository.
 
+### Registration storage
+
+Registration uses Supabase's REST API from server functions. Before enabling submissions:
+
+1. Create a Supabase project and run [`data/supabase-registrations.sql`](data/supabase-registrations.sql) in its SQL editor.
+2. Add `SUPABASE_URL` and `SUPABASE_SECRET_KEY` to `.env.local` for local development and to the deployment provider for production. Use the project URL (not an API key) for `SUPABASE_URL`. Never use a `VITE_` prefix for the secret key.
+3. Redeploy. The form stays disabled while these settings are missing.
+
+The prototype does not set an event date, venue, seat limit, or agenda. Confirm those details before publishing registration as final.
+
 ## Author
 
 **Gouri**, B.Tech Computer Science and Engineering, RSET Kochi
