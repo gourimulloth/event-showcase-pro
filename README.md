@@ -2,7 +2,7 @@
 
 A modern, responsive website for **TEDxRSET**, the independently organized TEDx event of Rajagiri School of Engineering & Technology (RSET), Kochi.
 
-**Live site:** [ADD YOUR LIVE LINK HERE]
+**Live site:** tedxrset.vercel.app
 
 > This independent TEDx event is operated under license from TED.
 
